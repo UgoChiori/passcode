@@ -1,14 +1,17 @@
 import GeneratePasscode from "./components/GeneratePasscode"
+import VerifyPasscode from "./components/ValidatePasscode"
+import {Routes, Route} from "react-router-dom"
 
 
 function App() {
 
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
-  <GeneratePasscode />
-  
-    </div>
+        <Routes>
+          <Route path="/" element={<GeneratePasscode />} />
+          <Route path="/verify" element={<VerifyPasscode />} />
+        </Routes>
+   
   )
 }
 
